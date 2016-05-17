@@ -16,7 +16,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE    := main
-LOCAL_SRC_FILES := main.c
+LOCAL_MODULE    := deamon
+LOCAL_SRC_FILES := deamon.c
 
 include $(BUILD_EXECUTABLE)

@@ -65,10 +65,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt1:
-                UnixExecUtil.initNativeExecutable(this, "iptables");
+                UnixExecUtil.initNativeExecutable(this, "deamon");
                 break;
             case R.id.bt2:
-                String executablePath = getApplicationContext().getFilesDir().getAbsolutePath() + File.separator + "iptables -h";
+                String executablePath = getApplicationContext().getFilesDir().getAbsolutePath() + File.separator + "deamon";
                 String output = UnixExecUtil.exec(executablePath);
                 ((TextView) findViewById(R.id.tv1)).setText(output);
                 break;
