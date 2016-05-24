@@ -4,7 +4,7 @@
 APP_OPTIM := debug
 
 # APP_ABI four options: armeabi, armeabi-v7a, mips, x86, all
-APP_ABI := armeabi
+APP_ABI := all
 
 # APP_PLATFORM: used to specify the include folder
 APP_PLATFORM := android-19
