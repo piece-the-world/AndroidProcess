@@ -26,10 +26,16 @@ android {
 //            "NDK_APP_DST_DIR=$buildDir/ndk/libs/\$(TARGET_ARCH_ABI)"
 //}
 
-task copyFile(type: Copy) {
-    from file('src/main/jni/deamon')
+task deleteExe(type: Delete) {
+    delete 'src/main/assets', 'uglyFile'
+}
+
+task copyExe(type: Copy) {
+    from file('src/main/libs/x86_64')
     into file('src/main/assets/')
 }
+
+copyExe.dependsOn(deleteExe)
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
